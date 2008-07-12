@@ -7,14 +7,6 @@ module ApplicationHelper
     false
   end
 
-  def title(page_title)
-    @title = page_title
-  end
-
-  def display_title(store_name)
-    [store_name, @title].compact.join(" - ")
-  end
-
   def stylesheets
     stylesheets = [stylesheet_link_tag("spree"), stylesheet_link_tag("application")]
     ["#{controller.controller_name}/_controller", "#{controller.controller_name}/#{:action_name}"].each do |stylesheet|
